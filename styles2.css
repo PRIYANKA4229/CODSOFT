@@ -12,6 +12,8 @@ body {
 /* Heading Styling */
 h1 {
     color: #333; /* Dark gray for better readability */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Container Styling */
@@ -74,8 +76,8 @@ p {
     margin-top: 20px;
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 600px) {
+/* Media Query for Tablets and Smaller Screens (max-width: 768px) */
+@media (max-width: 768px) {
     .home-container {
         margin: 20px auto; /* Reduce margin for smaller screens */
         padding: 15px; /* Slightly reduce padding for smaller screens */
@@ -102,5 +104,35 @@ p {
     p {
         font-size: 14px; /* Adjust paragraph font size for smaller screens */
         margin-top: 10px; /* Adjust margin for better spacing on small screens */
+    }
+}
+
+/* Media Query for Very Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Further adjust heading size for very small screens */
+    }
+
+    .home-container {
+        margin: 10px auto; /* Further reduce margin for very small screens */
+        padding: 10px; /* Further reduce padding for very small screens */
+    }
+
+    button {
+        width: 100%; /* Ensure full width for very small screens */
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+
+    input[type="email"], input[type="password"] {
+        font-size: 14px; /* Adjust font size for input fields */
+    }
+
+    label {
+        font-size: 12px; /* Adjust label size for very small screens */
+    }
+
+    p {
+        font-size: 12px; /* Adjust paragraph font size for very small screens */
+        margin-top: 8px; /* Adjust margin for better spacing */
     }
 }
