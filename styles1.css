@@ -1,3 +1,4 @@
+/* Base Styling for Body */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -7,12 +8,14 @@ body {
     background-image: linear-gradient(to bottom right, #ffebf0, #fff); /* Soft pink gradient */
 }
 
+/* Heading Styling */
 h1 {
     color: #333;
     text-align: center;
     margin-bottom: 20px;
 }
 
+/* Container Styling */
 .home-container, .quiz-container, .quiz-list-container, .quiz-take-container {
     max-width: 600px;
     margin: 50px auto;
@@ -23,7 +26,7 @@ h1 {
     border: 1px solid #ddd; /* Light grey border for a subtle edge */
 }
 
-
+/* Button Styling */
 button {
     display: inline-block; /* Make buttons appear inline */
     width: 15%; /* Adjusted width to fit two buttons on one line */
@@ -38,12 +41,12 @@ button {
     text-align: center; /* Center text within button */
 }
 
+/* Button Hover Effect */
 button:hover {
     background-color: #ff66b2; /* Slightly darker pink for hover effect */
 }
 
-
-
+/* Form and Input Styling */
 form {
     margin-top: 20px;
 }
@@ -62,6 +65,7 @@ input[type="text"], input[type="email"], input[type="password"] {
     border-radius: 4px;
 }
 
+/* Link Styling */
 a {
     text-decoration: none;
     color: #007bff; /* Blue color for links */
@@ -69,4 +73,25 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .home-container, .quiz-container, .quiz-list-container, .quiz-take-container {
+        margin: 20px auto; /* Reduce the margin to fit smaller screens */
+        padding: 15px; /* Slightly reduce padding for a better fit */
+    }
+
+    button {
+        width: 100%; /* Allow buttons to take up full width on small screens */
+        font-size: 14px; /* Increase font size slightly for readability */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+
+    label, input[type="text"], input[type="email"], input[type="password"] {
+        font-size: 16px; /* Increase form text size for better readability */
+    }
 }
