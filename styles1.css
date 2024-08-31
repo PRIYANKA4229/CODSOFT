@@ -1,97 +1,186 @@
-/* Base Styling for Body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+/* Media Query for Mobile Devices */
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    background-color: #f8f8f8; /* Light grey background */
-    background-image: linear-gradient(to bottom right, #ffebf0, #fff); /* Soft pink gradient */
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease-in-out;
 }
 
-/* Heading Styling */
-h1 {
-    color: #333;
+.quiz-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
     text-align: center;
+}
+
+.quiz-heading {
+    font-size: 2em;
+    color: #2c3e50;
     margin-bottom: 20px;
 }
 
-/* Container Styling */
-.home-container, .quiz-container, .quiz-list-container, .quiz-take-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd; /* Light grey border for a subtle edge */
+.question {
+    font-size: 1.25em;
+    color: #34495e;
+    margin-bottom: 20px;
 }
 
-/* Button Styling */
-button {
-    display: inline-block; /* Make buttons appear inline */
-    width: 15%; /* Adjusted width to fit two buttons on one line */
-    padding: 10px;
-    margin: 10px; /* Add margin between buttons */
-    background-color: pink; /* Button color */
-    color: #fff;
-    border: 2px solid black; /* Black border around buttons */
-    border-radius: 2px;
-    cursor: pointer;
-    font-size: 12px;
-    text-align: center; /* Center text within button */
+.answers {
+    margin-bottom: 20px;
 }
 
-/* Button Hover Effect */
-button:hover {
-    background-color: #ff66b2; /* Slightly darker pink for hover effect */
-}
-
-/* Form and Input Styling */
-form {
-    margin-top: 20px;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-    color: #333;
-}
-
-input[type="text"], input[type="email"], input[type="password"] {
+.answer {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    margin: 8px 0;
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
 }
 
-/* Link Styling */
-a {
-    text-decoration: none;
-    color: #007bff; /* Blue color for links */
+.answer:hover {
+    background-color: #2980b9;
 }
 
-a:hover {
-    text-decoration: underline;
+.answer.correct {
+    background-color: #2ecc71;
 }
 
-/* Media Query for Mobile Devices */
+.answer.wrong {
+    background-color: #e74c3c;
+}
+
+.next-btn {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    display: none;
+    transition: background-color 0.3s;
+}
+
+.next-btn:hover {
+    background-color: #16a085;
+}
+
+.result {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-top: 20px;
+    display: none;
+    background-image: url('https://assets.onecompiler.app/42q457vx6/42q49fhdb/images%20(5).jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    min-height: 400px; /* Increase the height of the result container */
+    width: 100%; /* Ensure the result section takes the full width */
+    padding: 20px; /* Add padding for better text positioning */
+    border-radius: 10px; /* Optional: Rounded corners for a polished look */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+}
+
+}
 @media (max-width: 600px) {
     .home-container, .quiz-container, .quiz-list-container, .quiz-take-container {
         margin: 20px auto; /* Reduce the margin to fit smaller screens */
         padding: 15px; /* Slightly reduce padding for a better fit */
     }
 
-    button {
-        width: 100%; /* Allow buttons to take up full width on small screens */
-        font-size: 14px; /* Increase font size slightly for readability */
-    }
+}
 
-    h1 {
-        font-size: 1.5em; /* Adjust heading size for smaller screens */
-    }
+.quiz-heading {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
 
-    label, input[type="text"], input[type="email"], input[type="password"] {
-        font-size: 16px; /* Increase form text size for better readability */
+.question {
+    font-size: 1.25em;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.answers {
+    margin-bottom: 20px;
+}
+
+.answer {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.answer:hover {
+    background-color: #2980b9;
+}
+
+.answer.correct {
+    background-color: #2ecc71;
+}
+
+.answer.wrong {
+    background-color: #e74c3c;
+}
+
+.next-btn {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    display: none;
+    transition: background-color 0.3s;
+}
+
+.next-btn:hover {
+    background-color: #16a085;
+}
+
+.result {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-top: 20px;
+    display: none;
+    background-image: url('https://assets.onecompiler.app/42q457vx6/42q49fhdb/images%20(5).jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    min-height: 400px; /* Increase the height of the result container */
+    width: 100%; /* Ensure the result section takes the full width */
+    padding: 20px; /* Add padding for better text positioning */
+    border-radius: 10px; /* Optional: Rounded corners for a polished look */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+}
+
+}
+
+@media screen and (max-width: 400px) {
+    .quiz-container {
+        width: 90%;
     }
 }
