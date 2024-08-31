@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light grey for better contrast */
+    background-image: linear-gradient(135deg, #f0f0f0 25%, pink 25%, pink 50%, #f0f0f0 50%, #f0f0f0 75%, pink 75%); /* Diagonal stripes */
+    background-size: 100px 100px; /* Size of the stripes */
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333; /* Dark gray for better readability */
+}
+
+.home-container {
+    max-width: 600px;
+    margin: 100px auto; /* Center the container with more space from top */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text and buttons */
+    border: 2px solid black; /* Black border around the container */
+}
+
+button {
+    display: inline-block; /* Make buttons appear inline */
+    width: 45%; /* Adjusted width to fit two buttons on one line */
+    padding: 10px;
+    margin: 10px; /* Add margin between buttons */
+    background-color: pink; /* Button color */
+    color: #fff;
+    border: 2px solid black; /* Black border around buttons */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center; /* Center text within button */
+}
+
+button:hover {
+    background-color: #ff66b2; /* Slightly darker pink for hover effect */
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #333; /* Dark gray for better readability */
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 2px solid #333; /* Dark gray border for inputs */
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-top: 20px;
+}
