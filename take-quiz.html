@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="quiz-container">
+       <div class="home-button-container">
+        <a href="index.html">
+            <button>Back to Home</button>
+        </a>
+  
+        <h1 class="quiz-heading">Online Quiz</h1>
+        <div id="quiz">
+            <div id="question" class="question"></div>
+            <div class="answers">
+                <button class="answer" onclick="selectAnswer(0)">Answer 1</button>
+                <button class="answer" onclick="selectAnswer(1)">Answer 2</button>
+                <button class="answer" onclick="selectAnswer(2)">Answer 3</button>
+                <button class="answer" onclick="selectAnswer(3)">Answer 4</button>
+            </div>
+            <button id="next-btn" class="next-btn" onclick="nextQuestion()">Next Question</button>
+        </div>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="script1.js"></script>
+    
+</body>
+</html>
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Register</h1>
+        <form id="register-form">
+            <label for="register-email">Email:</label>
+            <input type="email" id="register-email" name="email" required>
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" name="password" required>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Log in here</a></p>
+        <a href="index.html">
+            <button>Back to Home</button>
+        </a>
+    </div>
+    <script>
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Simulate an API request for registration (replace with actual API call)
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+
+            if (email && password) {
+                // Simulate successful registration
+                alert('Registration successful');
+                window.location.href = 'home.html'; // Redirect to homepage
+            } else {
+                alert('Please fill in both fields');
+            }
+        });
+    </script>
+</body>
+</html>

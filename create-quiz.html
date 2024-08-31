@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Create Your Quiz</h1>
+        <form id="quiz-form">
+            <div class="question-block">
+                <label for="question-1">Question 1:</label>
+                <input type="text" id="question-1" name="question-1" required>
+                <div class="options">
+                    <label for="q1-option1">Option 1:</label>
+                    <input type="text" id="q1-option1" name="q1-option1" required>
+                    <label for="q1-option2">Option 2:</label>
+                    <input type="text" id="q1-option2" name="q1-option2" required>
+                    <label for="q1-option3">Option 3:</label>
+                    <input type="text" id="q1-option3" name="q1-option3" required>
+                    <label for="q1-option4">Option 4:</label>
+                    <input type="text" id="q1-option4" name="q1-option4" required>
+                </div>
+                <label for="q1-correct">Correct Answer:</label>
+                <input type="text" id="q1-correct" name="q1-correct" required>
+            </div>
+            <!-- You can add more question blocks as needed -->
+            <button type="submit">Save Quiz</button>
+        </form>
+    </div>
+    <!-- Link back to Home Page -->
+    <a href="index.html">
+        <button>Back to Home</button>
+    </a>
+</body>
+</html>
