@@ -1,186 +1,138 @@
-/* Media Query for Mobile Devices */
-
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Base Styling for Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light grey for better contrast */
+    background-image: linear-gradient(135deg, #f0f0f0 25%, pink 25%, pink 50%, #f0f0f0 50%, #f0f0f0 75%, pink 75%); /* Diagonal stripes */
+    background-size: 100px 100px; /* Size of the stripes */
+    background-repeat: repeat;
     margin: 0;
-    background-size: cover;
-    background-position: center;
-    transition: background 0.5s ease-in-out;
+    padding: 0;
 }
 
-.quiz-container {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 350px;
+/* Heading Styling */
+h1 {
+    color: #333; /* Dark gray for better readability */
     text-align: center;
-}
-
-.quiz-heading {
-    font-size: 2em;
-    color: #2c3e50;
     margin-bottom: 20px;
 }
 
-.question {
-    font-size: 1.25em;
-    color: #34495e;
-    margin-bottom: 20px;
-}
-
-.answers {
-    margin-bottom: 20px;
-}
-
-.answer {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 12px 0;
-    margin: 8px 0;
-    width: 100%;
+/* Container Styling */
+.home-container {
+    max-width: 600px;
+    margin: 100px auto; /* Center the container with more space from top */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text and buttons */
+    border: 2px solid black; /* Black border around the container */
+}
+
+/* Button Styling */
+button {
+    display: inline-block; /* Make buttons appear inline */
+    width: 45%; /* Adjusted width to fit two buttons on one line */
+    padding: 10px;
+    margin: 10px; /* Add margin between buttons */
+    background-color: pink; /* Button color */
+    color: #fff;
+    border: 2px solid black; /* Black border around buttons */
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    text-align: center; /* Center text within button */
 }
 
-.answer:hover {
-    background-color: #2980b9;
+/* Button Hover Effect */
+button:hover {
+    background-color: #ff66b2; /* Slightly darker pink for hover effect */
 }
 
-.answer.correct {
-    background-color: #2ecc71;
-}
-
-.answer.wrong {
-    background-color: #e74c3c;
-}
-
-.next-btn {
-    background-color: #1abc9c;
-    color: white;
-    border: none;
-    padding: 12px 0;
-    width: 100%;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1em;
-    display: none;
-    transition: background-color 0.3s;
-}
-
-.next-btn:hover {
-    background-color: #16a085;
-}
-
-.result {
-    font-size: 1.5em;
-    color: #2c3e50;
+/* Form and Input Styling */
+form {
     margin-top: 20px;
-    display: none;
-    background-image: url('https://assets.onecompiler.app/42q457vx6/42q49fhdb/images%20(5).jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    min-height: 400px; /* Increase the height of the result container */
-    width: 100%; /* Ensure the result section takes the full width */
-    padding: 20px; /* Add padding for better text positioning */
-    border-radius: 10px; /* Optional: Rounded corners for a polished look */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
 }
 
+label {
+    display: block;
+    margin-top: 10px;
+    color: #333; /* Dark gray for better readability */
 }
-@media (max-width: 600px) {
-    .home-container, .quiz-container, .quiz-list-container, .quiz-take-container {
-        margin: 20px auto; /* Reduce the margin to fit smaller screens */
-        padding: 15px; /* Slightly reduce padding for a better fit */
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 2px solid #333; /* Dark gray border for inputs */
+    border-radius: 4px;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-top: 20px;
+}
+
+/* Media Query for Tablets and Smaller Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .home-container {
+        margin: 20px auto; /* Reduce margin for smaller screens */
+        padding: 15px; /* Slightly reduce padding for smaller screens */
     }
 
+    button {
+        width: 100%; /* Full width buttons on small screens */
+        margin: 5px 0; /* Adjust margin for better spacing on small screens */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+
+    input[type="email"], input[type="password"] {
+        padding: 12px; /* Slightly larger padding for better usability on touch devices */
+        font-size: 16px; /* Increase font size for better readability on smaller screens */
+    }
+
+    label {
+        font-size: 14px; /* Adjust label size for smaller screens */
+    }
+
+    p {
+        font-size: 14px; /* Adjust paragraph font size for smaller screens */
+        margin-top: 10px; /* Adjust margin for better spacing on small screens */
+    }
 }
 
-.quiz-heading {
-    font-size: 2em;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
+/* Media Query for Very Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Further adjust heading size for very small screens */
+    }
 
-.question {
-    font-size: 1.25em;
-    color: #34495e;
-    margin-bottom: 20px;
-}
+    .home-container {
+        margin: 10px auto; /* Further reduce margin for very small screens */
+        padding: 10px; /* Further reduce padding for very small screens */
+    }
 
-.answers {
-    margin-bottom: 20px;
-}
+    button {
+        width: 100%; /* Ensure full width for very small screens */
+        font-size: 14px; /* Adjust font size for better readability */
+    }
 
-.answer {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 12px 0;
-    margin: 8px 0;
-    width: 100%;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
+    input[type="email"], input[type="password"] {
+        font-size: 14px; /* Adjust font size for input fields */
+    }
 
-.answer:hover {
-    background-color: #2980b9;
-}
+    label {
+        font-size: 12px; /* Adjust label size for very small screens */
+    }
 
-.answer.correct {
-    background-color: #2ecc71;
-}
-
-.answer.wrong {
-    background-color: #e74c3c;
-}
-
-.next-btn {
-    background-color: #1abc9c;
-    color: white;
-    border: none;
-    padding: 12px 0;
-    width: 100%;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1em;
-    display: none;
-    transition: background-color 0.3s;
-}
-
-.next-btn:hover {
-    background-color: #16a085;
-}
-
-.result {
-    font-size: 1.5em;
-    color: #2c3e50;
-    margin-top: 20px;
-    display: none;
-    background-image: url('https://assets.onecompiler.app/42q457vx6/42q49fhdb/images%20(5).jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    min-height: 400px; /* Increase the height of the result container */
-    width: 100%; /* Ensure the result section takes the full width */
-    padding: 20px; /* Add padding for better text positioning */
-    border-radius: 10px; /* Optional: Rounded corners for a polished look */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
-}
-
-}
-
-@media screen and (max-width: 400px) {
-    .quiz-container {
-        width: 90%;
+    p {
+        font-size: 12px; /* Adjust paragraph font size for very small screens */
+        margin-top: 8px; /* Adjust margin for better spacing */
     }
 }
