@@ -33,7 +33,7 @@ button {
     border: 2px solid black; /* Black border around buttons */
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 8px;
     text-align: center; /* Center text within button */
 }
 
@@ -52,8 +52,8 @@ label {
 }
 
 input[type="email"], input[type="password"] {
-    width: 100%;
-    padding: 8px;
+    width: 30%;
+    padding: 6px;
     margin-top: 5px;
     border: 2px solid #333; /* Dark gray border for inputs */
     border-radius: 4px;
