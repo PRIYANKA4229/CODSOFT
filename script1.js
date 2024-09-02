@@ -93,6 +93,12 @@ function loadQuestion() {
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundPosition = 'center';
     document.body.style.backgroundRepeat = 'no-repeat';
+    document.body.style.display = 'flex';
+    document.body.style.flexDirection = 'column';
+    document.body.style.justifyContent = 'center';
+    document.body.style.alignItems = 'center';
+    document.body.style.height = '100vh';
+    document.body.style.margin = '0';
 
     // Hide the Next button initially
     document.getElementById("next-btn").style.display = "none";
