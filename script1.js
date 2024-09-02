@@ -89,6 +89,11 @@ function loadQuestion() {
     // Change background based on the topic
     document.body.style.backgroundImage = quizData[currentQuestion].background;
 
+    // Ensure the background fits properly
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundPosition = 'center';
+    document.body.style.backgroundRepeat = 'no-repeat';
+
     // Hide the Next button initially
     document.getElementById("next-btn").style.display = "none";
 }
@@ -135,16 +140,6 @@ function showResult() {
     resultElement.innerText = `You scored ${score} out of ${quizData.length}!`;
     resultElement.style.display = "block";
 }
-
-// Handle window resize to adjust background
-function handleResize() {
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundPosition = 'center';
-}
-
-// Call handleResize on window resize and initial load
-window.addEventListener('resize', handleResize);
-handleResize();
 
 // Add event listeners for buttons
 document.querySelectorAll(".answer").forEach((button, index) => {
