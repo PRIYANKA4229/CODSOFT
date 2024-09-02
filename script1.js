@@ -133,8 +133,24 @@ function showResult() {
     document.getElementById("quiz").style.display = "none";
     const resultElement = document.getElementById("result");
     resultElement.innerText = `You scored ${score} out of ${quizData.length}!`;
-   resultElement.style.display = "block";
+    resultElement.style.display = "block";
+}
 
-   }
+// Handle window resize to adjust background
+function handleResize() {
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundPosition = 'center';
+}
+
+// Call handleResize on window resize and initial load
+window.addEventListener('resize', handleResize);
+handleResize();
+
+// Add event listeners for buttons
+document.querySelectorAll(".answer").forEach((button, index) => {
+    button.addEventListener("click", () => selectAnswer(index));
+});
+
+document.getElementById("next-btn").addEventListener("click", nextQuestion);
 
 document.addEventListener("DOMContentLoaded", loadQuestion);
