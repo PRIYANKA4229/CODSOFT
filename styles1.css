@@ -84,19 +84,4 @@ body {
     color: #2c3e50;
     margin-top: 20px;
     display: none;
-    background-image: url('https://assets.onecompiler.app/42q457vx6/42q49fhdb/images%20(5).jpg'); 
-    background-size: cover; /* Ensures the background image covers the entire area */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    min-height: 400px; /* Increase the height of the result container */
-    width: 100%; /* Ensure the result section takes the full width */
-    padding: 20px; /* Add padding for better text positioning */
-    border-radius: 10px; /* Optional: Rounded corners for a polished look */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
-}
-
-@media screen and (max-width: 400px) {
-    .quiz-container {
-        width: 90%;
-    }
 }
