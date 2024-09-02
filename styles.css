@@ -1,3 +1,4 @@
+/* Base Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -5,6 +6,9 @@ body {
     padding: 0;
     background-color: #f8f8f8; /* Light grey background */
     background-image: linear-gradient(to bottom right, #ffebf0, #fff); /* Soft pink gradient */
+    background-size: cover; /* Make sure the background image covers the entire screen */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Ensure the background image does not repeat */
 }
 
 h1 {
@@ -23,7 +27,6 @@ h1 {
     border: 1px solid #ddd; /* Light grey border for a subtle edge */
 }
 
-
 button {
     display: inline-block; /* Make buttons appear inline */
     width: 15%; /* Adjusted width to fit two buttons on one line */
@@ -41,8 +44,6 @@ button {
 button:hover {
     background-color: #ff66b2; /* Slightly darker pink for hover effect */
 }
-
-
 
 form {
     margin-top: 20px;
@@ -69,4 +70,55 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .home-container, .quiz-container, .quiz-list-container, .quiz-take-container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%; /* Full width buttons on small screens */
+        margin: 5px 0;
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    label, p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Further adjust heading size for very small screens */
+    }
+
+    .home-container, .quiz-container, .quiz-list-container, .quiz-take-container {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+        font-size: 14px;
+    }
+
+    label, p {
+        font-size: 12px;
+        margin-top: 8px;
+    }
 }
