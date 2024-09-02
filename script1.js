@@ -3,70 +3,70 @@ const quizData = [
         question: "What is the normal body temperature for a healthy human?",
         answers: ["35°C", "37°C", "39°C", "41°C"],
         correct: 1,
-        background: "url('https://assets.onecompiler.app/42q457vx6/42q45j97e/CAPA-BLOG-03-2-1080x675.png')",
+        backgroundClass: "background-health",
         topic: "health"
     },
     {
         question: "In which year did the first modern Olympic Games take place?",
         answers: ["1896", "1900", "1912", "1920"],
         correct: 0,
-        background: "url('https://assets.onecompiler.app/42q457vx6/42q45j97e/download.jpg')",
+        backgroundClass: "background-olympics",
         topic: "olympics"
     },
     {
         question: "Which flower is known as the 'Queen of Flowers'?",
         answers: ["Tulip", "Rose", "Lily", "Orchid"],
         correct: 1,
-        background: "url('https://assets.onecompiler.app/42q457vx6/42q49fhdb/images%20(4).jpg')",
+        backgroundClass: "background-flower",
         topic: "flower"
     },
     {
         question: "Which gas is most responsible for global warming?",
         answers: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
         correct: 2,
-        background: "url('https://assets.onecompiler.app/42q457vx6/42q45j97e/download%20(1).jpg')",
+        backgroundClass: "background-environment",
         topic: "environment"
     },
     {
         question: "Which is the smallest country in the world?",
         answers: ["Monaco", "Malta", "Vatican City", "San Marino"],
         correct: 2,
-        background: "url('https://assets.onecompiler.app/42q457vx6/42q45j97e/download%20(2).jpg')",
+        backgroundClass: "background-world",
         topic: "world"
     },
     {
         question: "Who is the current President of the United States? (As of 2024)",
         answers: ["Joe Biden", "Donald Trump", "Barack Obama", "Kamala Harris"],
         correct: 0,
-        background: "url('https://assets.onecompiler.app/42q457vx6/42q45j97e/images%20(1).jpg')",
+        backgroundClass: "background-politics",
         topic: "politics"
     },
     {
         question: "How many continents are there on Earth?",
         answers: ["5", "6", "7", "8"],
         correct: 2,
-        background: "url('https://assets.onecompiler.app/42q457vx6/42q45j97e/images%20(2).jpg')",
+        backgroundClass: "background-earth",
         topic: "earth"
     },
     {
         question: "Which country is known as the fashion capital of the world?",
         answers: ["New York", "Milan", "Paris", "London"],
         correct: 2,
-        background: "url('https://assets.onecompiler.app/42q457vx6/42q45j97e/images%20(3).jpg')",
+        backgroundClass: "background-fashion",
         topic: "fashion"
     },
     {
         question: "What is a synonym for 'happy'?",
         answers: ["Sad", "Joyful", "Angry", "Upset"],
         correct: 1,
-        background: "url('https://assets.onecompiler.app/42q457vx6/42q45j97e/images.png')",
+        backgroundClass: "background-synonym",
         topic: "synonym"
     },
     {
         question: "Who was the first person to walk on the moon?",
         answers: ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "John Glenn"],
         correct: 0,
-        background: "url('https://assets.onecompiler.app/42q457vx6/42q45j97e/download%20(3).jpg')",
+        backgroundClass: "background-real-stories",
         topic: "real stories"
     }
 ];
@@ -87,18 +87,7 @@ function loadQuestion() {
     });
 
     // Change background based on the topic
-    document.body.style.backgroundImage = quizData[currentQuestion].background;
-
-    // Ensure the background fits properly
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundPosition = 'center';
-    document.body.style.backgroundRepeat = 'no-repeat';
-    document.body.style.display = 'flex';
-    document.body.style.flexDirection = 'column';
-    document.body.style.justifyContent = 'center';
-    document.body.style.alignItems = 'center';
-    document.body.style.height = '100vh';
-    document.body.style.margin = '0';
+    document.body.className = quizData[currentQuestion].backgroundClass;
 
     // Hide the Next button initially
     document.getElementById("next-btn").style.display = "none";
@@ -138,7 +127,7 @@ function nextQuestion() {
 
 function showResult() {
     // Remove background image before showing the result
-    document.body.style.backgroundImage = "none";
+    document.body.className = "";
 
     // Hide the quiz and display the result
     document.getElementById("quiz").style.display = "none";
