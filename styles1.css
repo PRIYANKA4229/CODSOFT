@@ -1,17 +1,3 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-size: cover; /* Ensures the background image covers the entire area */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    transition: background 0.5s ease-in-out;
-}
-
 .quiz-container {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 30px;
