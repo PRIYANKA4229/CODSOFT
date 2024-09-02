@@ -123,3 +123,62 @@ body {
 .background-real-stories {
     background-image: url('https://assets.onecompiler.app/42q457vx6/42q45j97e/download%20(3).jpg');
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .quiz-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .quiz-heading {
+        font-size: 1.5em;
+    }
+
+    .question {
+        font-size: 1.1em;
+    }
+
+    .answer {
+        padding: 10px 0;
+        font-size: 0.9em;
+    }
+
+    .next-btn {
+        padding: 10px 0;
+        font-size: 0.9em;
+    }
+
+    .result {
+        font-size: 1.25em;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .quiz-heading {
+        font-size: 1.25em;
+    }
+
+    .question {
+        font-size: 1em;
+    }
+
+    .answer {
+        padding: 8px 0;
+        font-size: 0.85em;
+    }
+
+    .next-btn {
+        padding: 8px 0;
+        font-size: 0.85em;
+    }
+
+    .result {
+        font-size: 1.1em;
+    }
+}
