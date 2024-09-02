@@ -1,3 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out;
+}
+
 .quiz-container {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 30px;
@@ -5,6 +15,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 350px;
     text-align: center;
+    margin: 50px auto;
 }
 
 .quiz-heading {
@@ -70,4 +81,45 @@
     color: #2c3e50;
     margin-top: 20px;
     display: none;
+}
+
+/* Background classes for each question */
+.background-health {
+    background-image: url('https://assets.onecompiler.app/42q457vx6/42q45j97e/CAPA-BLOG-03-2-1080x675.png');
+}
+
+.background-olympics {
+    background-image: url('https://assets.onecompiler.app/42q457vx6/42q45j97e/download.jpg');
+}
+
+.background-flower {
+    background-image: url('https://assets.onecompiler.app/42q457vx6/42q49fhdb/images%20(4).jpg');
+}
+
+.background-environment {
+    background-image: url('https://assets.onecompiler.app/42q457vx6/42q45j97e/download%20(1).jpg');
+}
+
+.background-world {
+    background-image: url('https://assets.onecompiler.app/42q457vx6/42q45j97e/download%20(2).jpg');
+}
+
+.background-politics {
+    background-image: url('https://assets.onecompiler.app/42q457vx6/42q45j97e/images%20(1).jpg');
+}
+
+.background-earth {
+    background-image: url('https://assets.onecompiler.app/42q457vx6/42q45j97e/images%20(2).jpg');
+}
+
+.background-fashion {
+    background-image: url('https://assets.onecompiler.app/42q457vx6/42q45j97e/images%20(3).jpg');
+}
+
+.background-synonym {
+    background-image: url('https://assets.onecompiler.app/42q457vx6/42q45j97e/images.png');
+}
+
+.background-real-stories {
+    background-image: url('https://assets.onecompiler.app/42q457vx6/42q45j97e/download%20(3).jpg');
 }
